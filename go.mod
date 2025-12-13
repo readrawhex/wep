@@ -1,4 +1,4 @@
-module github.com/reallygoodprogrammer/wep
+module github.com/readrawhex/wep
 
 go 1.24.3
 
