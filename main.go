@@ -130,10 +130,7 @@ func main() {
 		doc.Find(query).Each(func(i int, s *goquery.Selection) {
 			var html string
 			if inner {
-				html, err = s.Html()
-				if err != nil {
-					toErr(fmt.Sprintf("could not get html: %v", url, err), url)
-				} 
+				html = s.Text()
 			} else {
 				html, err = goquery.OuterHtml(s)
 				if err != nil {
